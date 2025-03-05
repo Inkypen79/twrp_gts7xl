@@ -75,6 +75,12 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 PLATFORM_SECURITY_PATCH := 2021-12-01
 VENDOR_SECURITY_PATCH := 2021-12-01
 
+TARGET_RECOVERY_DEVICE_MODULES += \
+    android.hardware.gatekeeper@1.0 \
+    android.hardware.keymaster@4.1 \
+    libion \
+    libxml2
+
 # Dynamic Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 71303168
 BOARD_CACHEIMAGE_PARTITION_SIZE := 629145600
