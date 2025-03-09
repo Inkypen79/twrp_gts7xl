@@ -73,12 +73,6 @@ TARGET_OTA_ASSERT_DEVICE := gts7xl
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 
-TARGET_RECOVERY_DEVICE_MODULES += \
-    android.hardware.gatekeeper@1.0 \
-    android.hardware.keymaster@4.1 \
-    libion \
-    libxml2
-
 # Dynamic Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 71303168
 BOARD_CACHEIMAGE_PARTITION_SIZE := 629145600
