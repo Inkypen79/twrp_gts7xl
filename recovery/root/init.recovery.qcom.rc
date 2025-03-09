@@ -1,16 +1,10 @@
 import /init.recovery.qcom_decrypt.rc
 
 on fs
-    export ANDROID_ROOT /system
-
     wait /dev/block/platform/${ro.boot.boot_devices}
     symlink /dev/block/platform/${ro.boot.boot_devices} /dev/block/bootdevice
 
-    # Mount firmware
-    mkdir /vendor/firmware_mnt
-    mount vfat /dev/block/bootdevice/by-name/apnhlos /vendor/firmware_mnt ro
-    mkdir /vendor/firmware-modem
-    mount vfat /dev/block/bootdevice/by-name/modem /vendor/firmware-modem ro
+    mount_all /system/etc/recovery.fstab
 
 on init
     setprop prepdecrypt.setpatch true
